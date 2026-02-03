@@ -78,7 +78,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 /* VIDEO STYLING */
 .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
 
-/* DARK OVERLAY (Restores contrast for Hero) */
+/* DARK OVERLAY */
 .hero-bg-wrapper::after {
     content: '';
     position: absolute;
@@ -89,7 +89,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .hero-content { position: relative; z-index: 3; } 
 .overlay-dark { display: none; } 
 
-/* HERO TEXT OVERRIDES (White Text on Dark Hero) */
+/* HERO TEXT OVERRIDES */
 .hero h1 { color: #ffffff !important; text-shadow: 0 4px 20px rgba(0,0,0,0.6); }
 .hero .subheadline { color: #e0e0e0 !important; text-shadow: 0 1px 5px rgba(0,0,0,0.3); }
 .hero .eyebrow { color: #9d46ff !important; }
@@ -176,10 +176,10 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
 }
 .svg-icon-box svg { width: 60%; height: 60%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
-/* --- WHO WE SERVE HOVER CARDS (Strict Alignment) --- */
+/* --- WHO WE SERVE HOVER CARDS (Strict Alignment Fix) --- */
 .serve-card { 
     position: relative; 
-    height: 450px; /* Slight increase to give elements breathing room */
+    height: 450px; 
     border-radius: 12px; 
     overflow: hidden; 
     background-size: cover; 
@@ -196,13 +196,13 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
     left: 0; 
     width: 100%; 
     height: 100%; 
-    /* STATIC STATE: Darker overlay so text is crisp */
-    background: linear-gradient(to top, rgba(10,14,39,0.9) 0%, rgba(10,14,39,0.7) 100%);
+    /* Static State: Darker overlay for text readability */
+    background: linear-gradient(to top, rgba(10,14,39,0.9) 0%, rgba(10,14,39,0.6) 100%);
     transition: var(--transition);
     z-index: 1;
 }
 
-/* HOVER STATE: Lighten the overlay to reveal more image */
+/* Hover State: Lighten overlay to show image */
 .serve-card:hover .serve-overlay { 
     background: linear-gradient(to top, rgba(10,14,39,0.7) 0%, rgba(10,14,39,0.4) 100%);
 }
@@ -213,17 +213,16 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
     transform: translateY(-5px);
 }
 
-/* --- HEADER: Absolutely Centered --- */
+/* HEADER: Fixed Vertical Position (Aligned) */
 .serve-card h4 { 
     position: absolute;
-    top: 40%; /* Puts center of text near visual center */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Perfect centering */
+    top: 38%; /* Fixed distance from top = Perfect Horizontal Alignment */
+    left: 0;
     width: 100%;
+    text-align: center;
     padding: 0 1rem;
     
-    text-align: center;
-    font-size: 2rem; 
+    font-size: 2rem;
     color: #ffffff !important; 
     margin: 0; 
     font-weight: 700;
@@ -234,53 +233,51 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
 
 .serve-card:hover h4 { 
     text-shadow: 0 0 20px rgba(157, 70, 255, 0.8);
-    /* Optional: Move up slightly on hover if you want dynamic feel, otherwise remove next line */
-    transform: translate(-50%, -60%); 
 }
 
-/* --- BENEFITS TEXT: Fixed Position Below Header --- */
-.serve-details { 
+/* DESCRIPTION TEXT: Fixed Vertical Position (Below Header) */
+.serve-details p { 
     position: absolute;
-    top: 55%; /* Fixed starting point for all cards = Horizontal Alignment */
+    top: 55%; /* Fixed start point for text block */
     left: 0;
     width: 100%;
-    padding: 0 2rem;
     text-align: center;
-    z-index: 2;
-}
-
-.serve-details p { 
+    padding: 0 2rem;
+    
     color: #ffffff !important; 
     font-size: 1.05rem; 
     margin-bottom: 0; 
     opacity: 1; /* Always visible */
-    text-shadow: 0 2px 10px rgba(0,0,0,0.9); /* Strong shadow for readability on lighter hover */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.9);
     line-height: 1.5; 
     font-weight: 500; 
+    z-index: 2;
 }
 
-/* --- ACTION LINK: Pinned to Bottom, Appears on Hover --- */
+/* ACTION LINK: Pinned to Bottom, Appears on Hover */
 .serve-card .text-link { 
     position: absolute;
-    bottom: 35px;
-    left: 50%;
-    /* Start hidden and slightly lower */
-    transform: translateX(-50%) translateY(20px); 
-    opacity: 0;
+    bottom: 40px; /* Pinned to bottom of card */
+    left: 0;
+    width: 100%;
+    text-align: center;
     
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.serve-card .text-link span {
     font-weight: 700; 
     color: var(--accent-cyan); 
     border-bottom: 2px solid var(--accent-cyan); 
-    display: inline-block;
-    white-space: nowrap;
-    z-index: 2;
-    transition: var(--transition);
 }
 
-/* Slide up and fade in on hover */
+/* Hover: Slide up and fade in */
 .serve-card:hover .text-link { 
     opacity: 1; 
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 }
 
 /* CALCULATOR */
@@ -367,4 +364,3 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
     .mobile-menu-btn { display: block; color: var(--text-white); }
     h1 { font-size: 2.5rem; } .hero { text-align: left; }
 }
-
