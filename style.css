@@ -236,14 +236,14 @@ nav {
     padding: 2rem; 
     display: flex; 
     flex-direction: column; 
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     text-align: center;
     transition: var(--transition);
 }
 
 .serve-card:hover .serve-overlay { 
-    background: none;
+    background: linear-gradient(to top, rgba(10,14,39,0.85) 0%, rgba(10,14,39,0.7) 100%);
 }
 
 .serve-card:hover {
@@ -265,8 +265,27 @@ nav {
     text-shadow: 0 0 20px rgba(157, 70, 255, 0.8);
 }
 
-.serve-details { opacity: 1; transform: none; }
+.serve-details { opacity: 0; transform: none; display: block; }
 .serve-details p { color: #ffffff !important; font-size: 1.05rem; margin-bottom: 0; opacity: 1; text-shadow: 0 3px 15px rgba(0,0,0,0.9); line-height: 1.5; font-weight: 500; }
+
+.serve-card:hover .serve-details {
+    opacity: 1;
+}
+
+.serve-card .text-link { 
+    opacity: 0; 
+    transform: translateY(15px); 
+    transition: var(--transition); 
+    font-weight: 700; 
+    color: var(--accent-cyan); 
+    border-color: var(--accent-cyan); 
+    display: inline-block;
+}
+
+.serve-card:hover .text-link { 
+    opacity: 1; 
+    transform: translateY(0);
+}
 
 .serve-card .text-link { 
     opacity: 0; 
