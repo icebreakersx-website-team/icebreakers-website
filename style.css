@@ -391,22 +391,22 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
 }
 
 .feature-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto 1.5rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-violet);
-    background: rgba(157, 70, 255, 0.1);
-    border-radius: 12px; /* Soft square shape distinct from circular pillars */
+    color: white; /* Icon color */
+    background: var(--accent-violet); /* Purple background */
+    border-radius: 50%; /* Circular */
+    box-shadow: 0 8px 20px rgba(157, 70, 255, 0.2);
     transition: var(--transition);
 }
 
 .feature-item:hover .feature-icon {
-    background: var(--accent-violet);
-    color: white;
-    box-shadow: 0 10px 25px rgba(157, 70, 255, 0.4);
+    box-shadow: 0 12px 30px rgba(157, 70, 255, 0.4);
+    transform: scale(1.05);
 }
 
 .feature-icon svg {
