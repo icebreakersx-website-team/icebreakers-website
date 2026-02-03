@@ -109,6 +109,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
     color: white; 
     box-shadow: 0 4px 15px rgba(77, 121, 255, 0.3); 
 }
+/* Hero Primary Button Glow */
 .hero .btn-primary { box-shadow: 0 0 30px rgba(157, 70, 255, 0.6); }
 
 .btn-primary:hover { 
@@ -125,11 +126,13 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
     transform: translateY(-2px);
 }
 
+/* Special override for buttons in the Hero section */
 .hero .btn-secondary { border-color: white; color: white; background: transparent; }
 .hero .btn-secondary:hover { background: rgba(255,255,255,0.1); color: white; }
 
 .text-link { display: inline-block; margin-top: 1rem; font-size: 0.9rem; color: var(--text-body); border-bottom: 1px solid #cbd5e0; padding-bottom: 2px; }
 .text-link:hover { color: var(--accent-blue); border-color: var(--accent-blue); }
+/* Special override for links in Hero section */
 .hero .text-link { color: #e0e0e0; border-color: rgba(255,255,255,0.3); }
 .hero .text-link:hover { color: white; border-color: white; }
 
@@ -173,7 +176,7 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
 }
 .svg-icon-box svg { width: 60%; height: 60%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
-/* --- WHO WE SERVE HOVER CARDS (Strict Alignment) --- */
+/* --- WHO WE SERVE HOVER CARDS (Strict Alignment Fix) --- */
 .serve-card { 
     position: relative; 
     height: 450px; 
@@ -314,9 +317,7 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
 .section-padding h3 { color: var(--text-white) !important; }
 .section-padding p { color: var(--text-body); }
 
-/* --- FORCE FIX: WHY ICEBREAKERS ICONS --- */
-/* This overrides any previous size settings to fix the "Giant Icon" bug */
-
+/* --- FORCE FIX: WHY ICEBREAKERS ICONS (NEW) --- */
 .feature-item {
     text-align: center;
     padding: 1.5rem;
@@ -334,10 +335,10 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
     justify-content: center !important;
     
     /* BRANDING */
-    background-color: #9d46ff !important; /* Bright Violet Brand Color */
+    background-color: #9d46ff !important; /* Bright Violet */
     color: #ffffff !important; /* White Icon */
     
-    border-radius: 50% !important; /* Perfect Circle */
+    border-radius: 50% !important; 
     box-shadow: 0 10px 25px rgba(157, 70, 255, 0.3) !important;
 }
 
@@ -351,10 +352,10 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
 .feature-icon svg {
     width: 40px !important;
     height: 40px !important;
-    min-width: 40px !important; /* Prevents shrinking */
+    min-width: 40px !important;
     
     fill: none !important;
-    stroke: currentColor !important; /* Uses the white text color */
+    stroke: currentColor !important;
     stroke-width: 2 !important;
     stroke-linecap: round;
     stroke-linejoin: round;
