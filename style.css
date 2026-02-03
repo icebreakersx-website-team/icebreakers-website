@@ -176,7 +176,7 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
 }
 .svg-icon-box svg { width: 60%; height: 60%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
-/* --- WHO WE SERVE HOVER CARDS (CENTERED FIX) --- */
+/* WHO WE SERVE HOVER CARDS (CENTERED FIX) */
 .serve-card { 
     position: relative; 
     height: 400px; 
