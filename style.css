@@ -254,18 +254,22 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
     z-index: 2;
 }
 
-/* ACTION LINK: Pinned to Bottom, Appears on Hover */
+/* --- FIXED ACTION LINK: PINNED TO BOTTOM --- */
 .serve-card .text-link { 
     position: absolute;
-    bottom: 40px; /* Pinned to bottom of card */
+    bottom: 30px; /* PINNED TO BOTTOM */
     left: 0;
-    width: 100%;
+    width: 100%; /* Ensures centering works */
     text-align: center;
     
     opacity: 0; 
     transform: translateY(20px); 
     transition: var(--transition);
-    z-index: 2;
+    z-index: 3;
+    
+    /* Ensure no margins interfere */
+    margin: 0; 
+    padding: 0;
 }
 
 .serve-card .text-link span {
@@ -274,7 +278,7 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
     border-bottom: 2px solid var(--accent-cyan); 
 }
 
-/* Hover: Slide up and fade in */
+/* Hover: Slide up from bottom and fade in */
 .serve-card:hover .text-link { 
     opacity: 1; 
     transform: translateY(0);
