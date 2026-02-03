@@ -314,7 +314,9 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
 .section-padding h3 { color: var(--text-white) !important; }
 .section-padding p { color: var(--text-body); }
 
-/* --- NEW FEATURE ICONS (Why IceBreakers) --- */
+/* --- FORCE FIX: WHY ICEBREAKERS ICONS --- */
+/* This overrides any previous size settings to fix the "Giant Icon" bug */
+
 .feature-item {
     text-align: center;
     padding: 1.5rem;
@@ -322,33 +324,38 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
 }
 .feature-item:hover { transform: translateY(-5px); }
 
-/* THE PURPLE ICON CIRCLE */
+/* CIRCLE CONTAINER: Fixed Size & Purple Background */
 .feature-icon {
-    width: 80px !important;  /* Forced size */
-    height: 80px !important; /* Forced size */
-    margin: 0 auto 1.5rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white !important; /* Icon itself is white */
-    background: var(--accent-violet) !important; /* Background is purple */
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(157, 70, 255, 0.2);
-    transition: var(--transition);
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 1.5rem auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* BRANDING */
+    background-color: #9d46ff !important; /* Bright Violet Brand Color */
+    color: #ffffff !important; /* White Icon */
+    
+    border-radius: 50% !important; /* Perfect Circle */
+    box-shadow: 0 10px 25px rgba(157, 70, 255, 0.3) !important;
 }
 
+/* HOVER EFFECT */
 .feature-item:hover .feature-icon {
-    box-shadow: 0 12px 30px rgba(157, 70, 255, 0.4);
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(157, 70, 255, 0.5) !important;
 }
 
-/* THE SVG INSIDE */
+/* THE SVG ITSELF: Forced Small Size */
 .feature-icon svg {
-    width: 40px !important; /* Forced smaller size inside circle */
+    width: 40px !important;
     height: 40px !important;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
+    min-width: 40px !important; /* Prevents shrinking */
+    
+    fill: none !important;
+    stroke: currentColor !important; /* Uses the white text color */
+    stroke-width: 2 !important;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
