@@ -377,3 +377,58 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
     .mobile-menu-btn { display: block; color: var(--text-white); }
     h1 { font-size: 2.5rem; } .hero { text-align: left; }
 }
+/* --- NEW ADDITIONS FOR HOME PAGE --- */
+
+/* Feature Grid Item (Why IceBreakers Section) */
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-violet);
+    background: rgba(157, 70, 255, 0.1);
+    border-radius: 12px; /* Soft square shape distinct from circular pillars */
+    transition: var(--transition);
+}
+
+.feature-item:hover .feature-icon {
+    background: var(--accent-violet);
+    color: white;
+    box-shadow: 0 10px 25px rgba(157, 70, 255, 0.4);
+}
+
+.feature-icon svg {
+    width: 50%;
+    height: 50%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Ensure Grid-4 works responsibly if not already defined */
+@media (max-width: 1000px) {
+    .grid-4 {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
