@@ -371,4 +371,43 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
     h1 { font-size: 2.5rem; } .hero { text-align: left; }
     .grid-4 { grid-template-columns: 1fr; }
 }
+/* --- NEW PULL QUOTE SECTION (About Page) --- */
+.pull-quote-wrapper {
+    position: relative;
+    padding: 2rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pull-quote-icon {
+    display: block;
+    font-family: var(--font-head); /* Adelle */
+    font-size: 6rem;
+    line-height: 0.5;
+    color: var(--accent-violet);
+    margin-bottom: 1.5rem;
+    opacity: 0.4;
+}
+
+.pull-quote-text {
+    font-family: var(--font-head); /* Adelle */
+    font-size: clamp(2rem, 4vw, 3.2rem); /* Responsive, large sizing */
+    font-weight: 700;
+    color: var(--text-white); /* Dark Navy */
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 2;
+}
+
+/* Add a subtle accent line below */
+.pull-quote-wrapper::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--accent-violet);
+    margin: 3rem auto 0;
+    border-radius: 2px;
+}
 
