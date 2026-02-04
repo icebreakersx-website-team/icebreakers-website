@@ -165,7 +165,7 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
     box-shadow: var(--shadow-hover); 
 }
 
-/* ICONS */
+/* THREE PILLAR ICONS (Circular Blue) */
 .svg-icon-box {
     width: 80px; height: 80px; 
     margin: 0 auto 1.5rem auto;
@@ -192,17 +192,12 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
 
 .serve-overlay { 
     position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    /* Static State: Darker overlay for text readability */
+    top: 0; left: 0; width: 100%; height: 100%; 
     background: linear-gradient(to top, rgba(10,14,39,0.9) 0%, rgba(10,14,39,0.6) 100%);
     transition: var(--transition);
     z-index: 1;
 }
 
-/* Hover State: Lighten overlay to show image */
 .serve-card:hover .serve-overlay { 
     background: linear-gradient(to top, rgba(10,14,39,0.7) 0%, rgba(10,14,39,0.4) 100%);
 }
@@ -213,15 +208,10 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
     transform: translateY(-5px);
 }
 
-/* HEADER: Fixed Vertical Position (Aligned) */
 .serve-card h4 { 
     position: absolute;
-    top: 38%; /* Fixed distance from top = Perfect Horizontal Alignment */
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 0 1rem;
-    
+    top: 38%; left: 0; width: 100%;
+    text-align: center; padding: 0 1rem;
     font-size: 2rem;
     color: #ffffff !important; 
     margin: 0; 
@@ -231,84 +221,47 @@ nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; paddin
     transition: var(--transition);
 }
 
-.serve-card:hover h4 { 
-    text-shadow: 0 0 20px rgba(157, 70, 255, 0.8);
-}
+.serve-card:hover h4 { text-shadow: 0 0 20px rgba(157, 70, 255, 0.8); }
 
-/* DESCRIPTION TEXT: Fixed Vertical Position (Below Header) */
 .serve-details p { 
     position: absolute;
-    top: 55%; /* Fixed start point for text block */
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 0 2rem;
-    
+    top: 55%; left: 0; width: 100%;
+    text-align: center; padding: 0 2rem;
     color: #ffffff !important; 
     font-size: 1.05rem; 
     margin-bottom: 0; 
-    opacity: 1; /* Always visible */
+    opacity: 1; 
     text-shadow: 0 2px 10px rgba(0,0,0,0.9);
     line-height: 1.5; 
     font-weight: 500; 
     z-index: 2;
 }
 
-/* --- ACTION LINK: PINNED TO BOTTOM, BIGGER, WHITE --- */
 .serve-card .text-link { 
     position: absolute;
-    bottom: 30px; /* PINNED TO BOTTOM */
-    left: 0;
-    width: 100%; 
+    bottom: 30px; left: 0; width: 100%; 
     text-align: center;
-    
     opacity: 0; 
     transform: translateY(20px); 
     transition: var(--transition);
     z-index: 3;
-    
-    /* Bigger & White */
     font-size: 1.25rem;
     font-weight: 700; 
     color: #ffffff !important;
     text-shadow: 0 2px 10px rgba(0,0,0,0.8); 
-    
-    /* Remove the line */
     border-bottom: none;
     text-decoration: none;
-    
-    margin: 0; 
-    padding: 0;
+    margin: 0; padding: 0;
 }
 
-/* Ensure no inner span lines remain */
-.serve-card .text-link span {
-    border: none;
-    color: inherit;
-}
-
-/* Hover: Slide up from bottom and fade in */
-.serve-card:hover .text-link { 
-    opacity: 1; 
-    transform: translateY(0);
-}
+.serve-card:hover .text-link { opacity: 1; transform: translateY(0); }
 
 /* CALCULATOR */
-.calculator-box { 
-    background: white; 
-    padding: 3rem; 
-    border-radius: 12px; 
-    border: 1px solid rgba(157, 70, 255, 0.2); 
-    box-shadow: 0 10px 40px rgba(157, 70, 255, 0.15); 
-}
+.calculator-box { background: white; padding: 3rem; border-radius: 12px; border: 1px solid rgba(157, 70, 255, 0.2); box-shadow: 0 10px 40px rgba(157, 70, 255, 0.15); }
 .calculator-box h4, .calculator-box .calc-result { color: var(--text-white) !important; }
 .calc-label { color: var(--accent-blue); font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
 input[type=range] { width: 100%; height: 4px; background: #e2e8f0; border-radius: 5px; outline: none; -webkit-appearance: none; }
-input[type=range]::-webkit-slider-thumb { 
-    -webkit-appearance: none; width: 20px; height: 20px; 
-    background: var(--accent-blue); border-radius: 50%; cursor: pointer; 
-    transition: box-shadow 0.3s ease;
-}
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; background: var(--accent-blue); border-radius: 50%; cursor: pointer; transition: box-shadow 0.3s ease; }
 input[type=range]:hover::-webkit-slider-thumb { box-shadow: 0 0 15px rgba(157, 70, 255, 0.8); }
 
 /* WORKFLOW DIAGRAM */
@@ -352,12 +305,7 @@ input[type=range]:hover::-webkit-slider-thumb { box-shadow: 0 0 15px rgba(157, 7
 
 /* FORMS */
 .form-group { margin-bottom: 1.5rem; }
-.form-input { 
-    width: 100%; padding: 14px; background: white; 
-    border: 2px solid #cbd5e0; 
-    color: var(--text-white); border-radius: 4px; 
-    transition: all 0.3s ease;
-}
+.form-input { width: 100%; padding: 14px; background: white; border: 2px solid #cbd5e0; color: var(--text-white); border-radius: 4px; transition: all 0.3s ease; }
 .form-input:focus { border-color: var(--accent-violet); outline: none; box-shadow: 0 0 0 4px rgba(157, 70, 255, 0.15); }
 .form-error { color: var(--accent-pink); font-size: 0.85rem; margin-top: 5px; display: none; }
 .success-message { background: rgba(77, 121, 255, 0.1); border: 1px solid var(--accent-blue); padding: 2rem; border-radius: 8px; text-align: center; display: none; }
@@ -369,11 +317,82 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
 .section-padding h3 { color: var(--text-white) !important; }
 .section-padding p { color: var(--text-body); }
 
+/* --- FORCE FIX: WHY ICEBREAKERS ICONS (Standard) --- */
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+.feature-item:hover { transform: translateY(-5px); }
+
+/* Standard (White Section) Icons - This handles normal state */
+.feature-icon {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 1.5rem auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #9d46ff !important;
+    color: #ffffff !important;
+    border-radius: 50% !important; 
+    box-shadow: 0 10px 25px rgba(157, 70, 255, 0.3) !important;
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(157, 70, 255, 0.5) !important;
+}
+
+.feature-icon svg {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 2 !important;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* --- NEW: PURPLE BACKGROUND UTILITIES --- */
+/* This handles the TEST requested by user */
+
+.bg-purple {
+    background-color: var(--accent-violet) !important; /* #9d46ff */
+    color: #ffffff !important;
+}
+
+/* Force all text white inside purple sections */
+.bg-purple h1, 
+.bg-purple h2, 
+.bg-purple h3, 
+.bg-purple h4, 
+.bg-purple h5, 
+.bg-purple p, 
+.bg-purple li {
+    color: #ffffff !important;
+}
+
+.bg-purple .eyebrow {
+    color: rgba(255,255,255,0.9) !important;
+}
+
+/* INVERT ICONS inside .bg-purple sections */
+/* White Circle + Purple Icon for contrast */
+.bg-purple .feature-icon {
+    background-color: #ffffff !important;
+    color: var(--accent-violet) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+}
+
 /* RESPONSIVE */
+@media (max-width: 1000px) { .grid-4 { grid-template-columns: 1fr 1fr; gap: 2rem; } }
 @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; gap: 3rem; } .grid-flow { flex-direction: column; } .flow-arrow { transform: rotate(90deg); margin: 1rem 0; } }
 @media (max-width: 768px) {
     .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: white; flex-direction: column; padding: 2rem; border-bottom: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
     .nav-links.nav-open { display: flex; }
     .mobile-menu-btn { display: block; color: var(--text-white); }
     h1 { font-size: 2.5rem; } .hero { text-align: left; }
+    .grid-4 { grid-template-columns: 1fr; }
 }
