@@ -98,7 +98,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 
 /* Static Hero Images */
 .bg-casino { background-image: url('hero-home.jpg'); } 
-.bg-about { background-image: url('hero-home.jpg'); } 
+.bg-about { background-image: url('AboutPageHero.png'); } 
 .bg-investor { background-image: url('Tradeshow.jpg'); background-color: #0a0e27; }
 
 /* BUTTONS */
@@ -396,3 +396,4 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
     h1 { font-size: 2.5rem; } .hero { text-align: left; }
     .grid-4 { grid-template-columns: 1fr; }
 }
+
