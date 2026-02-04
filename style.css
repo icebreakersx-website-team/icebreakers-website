@@ -99,7 +99,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 /* Static Hero Images */
 .bg-casino { background-image: url('hero-home.jpg'); } 
 .bg-about { background-image: url('AboutPageHero.png'); } 
-.bg-investor { background-image: url('Tradeshow.jpg'); background-color: #0a0e27; }
+.bg-investor { background-image: url('Tradeshow.png'); background-color: #0a0e27; }
 
 /* BUTTONS */
 .btn { display: inline-block; padding: 14px 32px; border-radius: 4px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: var(--transition); border: 1px solid transparent; letter-spacing: 0.5px; }
@@ -396,4 +396,5 @@ footer { border-top: 1px solid #e2e8f0 !important; background-color: var(--bg-se
     h1 { font-size: 2.5rem; } .hero { text-align: left; }
     .grid-4 { grid-template-columns: 1fr; }
 }
+
 
